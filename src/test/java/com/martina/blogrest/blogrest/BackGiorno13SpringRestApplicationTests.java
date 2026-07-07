@@ -1,4 +1,4 @@
-package com.martina.Back_Giorno13_SpringRest;
+package com.martina.blogrest.blogrest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

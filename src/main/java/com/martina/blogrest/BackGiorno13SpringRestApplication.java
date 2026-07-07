@@ -1,4 +1,4 @@
-package com.martina.Back_Giorno13_SpringRest;
+package com.martina.blogrest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
