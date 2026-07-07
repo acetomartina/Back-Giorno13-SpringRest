@@ -37,4 +37,25 @@ public class BlogPostController {
     public BlogPost getBlogPostById(@PathVariable Long id) {
         return blogPostService.findById(id);
     }
+
+    // Gestisce le richieste HTTP PUT.
+    @PutMapping("/{id}")
+    public BlogPost updateBlogPost(@PathVariable Long id,
+                                   @RequestBody BlogPost blogPost) {
+
+        return blogPostService.update(id, blogPost);
+    }
+
+    // Gestisce le richieste HTTP DELETE.
+    @DeleteMapping("/{id}")
+    public String deleteBlogPost(@PathVariable Long id) {
+
+        boolean deleted = blogPostService.delete(id);
+
+        if (deleted) {
+            return "BlogPost eliminato con successo!";
+        }
+
+        return "BlogPost non trovato!";
+    }
 }

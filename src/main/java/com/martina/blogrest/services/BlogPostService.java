@@ -41,4 +41,31 @@ public class BlogPostService {
                 .findFirst()
                 .orElse(null);
     }
+
+    public BlogPost update(Long id, BlogPost blogPostAggiornato) {
+
+        BlogPost blogPost = findById(id);
+
+        if (blogPost != null) {
+
+            blogPost.setCategoria(blogPostAggiornato.getCategoria());
+            blogPost.setTitolo(blogPostAggiornato.getTitolo());
+            blogPost.setContenuto(blogPostAggiornato.getContenuto());
+            blogPost.setTempoDiLettura(blogPostAggiornato.getTempoDiLettura());
+
+        }
+        return blogPost;
+    }
+
+    public boolean delete(Long id) {
+
+        BlogPost blogPost = findById(id);
+
+        if (blogPost != null) {
+            blogPosts.remove(blogPost);
+            return true;
+        }
+
+        return false;
+    }
 }
