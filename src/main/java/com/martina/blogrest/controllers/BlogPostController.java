@@ -25,4 +25,10 @@ public class BlogPostController {
         return blogPostService.findAll();
     }
 
+    // Gestisce le richieste HTTP POST
+    @PostMapping
+    // @RequestBody converte automaticamente il JSON ricevuto nel body della richiesta in un oggetto BlogPost
+    public BlogPost createBlogPost(@RequestBody BlogPost blogPost) {
+        return blogPostService.save(blogPost);
+    }
 }

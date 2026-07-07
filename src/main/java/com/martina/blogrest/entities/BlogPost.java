@@ -10,7 +10,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BlogPost {
-    private long id;
+    private Long id;
     private String categoria;
     private String titolo;
     private String cover;

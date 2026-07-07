@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Author {
-    private long id;
+    private Long id;
     private String nome;
     private String cognome;
     private String email;
