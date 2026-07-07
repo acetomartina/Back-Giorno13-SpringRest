@@ -34,4 +34,11 @@ public class BlogPostService {
 
         return blogPost;
     }
+
+    public BlogPost findById(Long id) {
+        return blogPosts.stream()
+                .filter(blogPost -> blogPost.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
 }

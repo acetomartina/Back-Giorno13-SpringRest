@@ -31,4 +31,10 @@ public class BlogPostController {
     public BlogPost createBlogPost(@RequestBody BlogPost blogPost) {
         return blogPostService.save(blogPost);
     }
+
+    @GetMapping("/{id}")
+    // @PathVariable prende l'id dall'URL
+    public BlogPost getBlogPostById(@PathVariable Long id) {
+        return blogPostService.findById(id);
+    }
 }
